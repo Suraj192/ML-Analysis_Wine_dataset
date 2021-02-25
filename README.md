@@ -3,6 +3,12 @@
 Datasource : UCI Machine Learning repository
 - https://archive.ics.uci.edu/ml/datasets/Wine+Quality
 
+## Team-Member
+- Suraj Sharma
+- Shree Sapkota
+- Swostik Shrestha
+- Pawan Singh
+
 Description
 
 Our data is downloaded from the above source given. The source consists of originally two different wine datasets (i.e. White-Wine and Red-Wine). Machine learning models was done only with the White-Wine dataset.
