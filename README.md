@@ -77,4 +77,4 @@ Random Forest Classifier
 
 ## 🎯 Purpose
 
-This project demonstrates modular ML project structuring following production-style code organization rather than notebook-only experimentation.
+This project demonstrates modular ML project structuring following production-style code organization and notebook exploration.
