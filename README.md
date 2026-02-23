@@ -52,7 +52,7 @@ ml_analysis_wine_Dataset/
 1. Clone the repository:
 ```
 git clone <your-repo-url>
-cd ml_analysis_wine_Dataset
+cd ML-Analysis_Wine_dataset
 ```
 
 2. Install dependencies:
