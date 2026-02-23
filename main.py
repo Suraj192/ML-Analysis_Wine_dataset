@@ -5,7 +5,7 @@ from src.evaluate import evaluate_model
 
 def main():
     # Load data
-    data = load_data("winequality-white.csv")
+    data = load_data("data/winequality-white.csv")
 
     # Preprocess
     X, y = preprocess_data(data)
