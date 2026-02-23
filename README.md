@@ -1,32 +1,80 @@
-# ML-Analysis_Wine_dataset
+# Wine Quality Prediction – Machine Learning Pipeline
 
-Datasource : UCI Machine Learning repository
-- https://archive.ics.uci.edu/ml/datasets/Wine+Quality
+## 📌 Project Overview
 
-## Team-Member
-- Suraj Sharma
-- Shree Sapkota
-- Swostik Shrestha
-- Pawan Singh
+This project implements an end-to-end machine learning pipeline to predict wine quality using physicochemical properties.
 
-Description
+The objective is to demonstrate structured ML development including preprocessing, model training, and evaluation using Random Forest.
 
-Our data is downloaded from the above source given. The source consists of originally two different wine datasets (i.e. White-Wine and Red-Wine). Machine learning models was done only with the White-Wine dataset.
+---
 
-Our primary objective of this task is to use machine learning models by understanding the data. Furthermore, our task involves appropriate selection of model's features, balancing data and to find the appropriate predictive scores for the data. The Overall task is divided into 4 parts Regression analysis, Classification-Supervised analysis, Semi-supervised models and Clustering models which is aggregated with 3 different files.
+## 🛠 Tech Stack
 
-For more information, read [Cortez et al., 2009]. Input variables (based on physicochemical tests):
+- Python
+- Pandas
+- Scikit-learn
+- Random Forest Classifier
 
-## Attributes Information
-fixed acidity
-volatile acidity
-citric acid
-residual sugar
-chlorides
-free sulfur dioxide
-total sulfur dioxide
-density
-pH
-sulphates
-alcohol
-Output variable (based on sensory data): 12 - quality (score between 0 and 10)
+---
+
+## 📂 Project Structure
+
+```
+ml_analysis_wine_Dataset/
+│
+├── data/
+│   └── wine.csv
+│
+├── src/
+│   ├── data_preprocessing.py
+│   ├── train.py
+│   ├── evaluate.py
+│
+├── main.py
+├── requirements.txt
+└── README.md
+```
+
+---
+
+## ⚙️ Pipeline Steps
+
+1. Data loading from CSV
+2. Data preprocessing
+3. Train-test split
+4. Random Forest model training
+5. Model evaluation using accuracy and classification report
+
+---
+
+## 🚀 How to Run
+
+1. Clone the repository:
+```
+git clone <your-repo-url>
+cd ml_analysis_wine_Dataset
+```
+
+2. Install dependencies:
+```
+pip install -r requirements.txt
+```
+
+3. Run the pipeline:
+```
+python main.py
+```
+
+---
+
+## 📊 Model
+
+Random Forest Classifier  
+- n_estimators = 100  
+- random_state = 42  
+
+---
+
+## 🎯 Purpose
+
+This project demonstrates modular ML project structuring following production-style code organization rather than notebook-only experimentation.
