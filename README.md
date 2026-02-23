@@ -78,3 +78,7 @@ Random Forest Classifier
 ## 🎯 Purpose
 
 This project demonstrates modular ML project structuring following production-style code organization and notebook exploration.
+
+## Conclusion
+
+“Due to significant class imbalance in minority classes (quality 3 and 8), overall accuracy remains around 65%. Macro F1-score was used as additional metric to evaluate balanced performance.”

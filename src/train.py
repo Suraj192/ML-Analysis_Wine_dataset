@@ -1,23 +1,18 @@
 from sklearn.ensemble import RandomForestClassifier
-from sklearn.feature_selection import SelectKBest, mutual_info_classif
+#from sklearn.feature_selection import SelectKBest, mutual_info_classif
 from imblearn.over_sampling import SMOTE
 
 def train_model(X_train, y_train):
     """
-    Feature selection + SMOTE + Random Forest training
+    SMOTE + Random Forest training
     """
 
-    # ---------------------------
-    # Feature Selection (fit ONLY on training data)
-    # ---------------------------
-    selector = SelectKBest(score_func=mutual_info_classif, k=6)
-    X_train_selected = selector.fit_transform(X_train, y_train)
 
     # ---------------------------
-    # SMOTE (apply ONLY on training data)
+    # SMOTE (apply  on training data)
     # ---------------------------
     smote = SMOTE(k_neighbors=4, random_state=42)
-    X_resampled, y_resampled = smote.fit_resample(X_train_selected, y_train)
+    X_resampled, y_resampled = smote.fit_resample(X_train, y_train)
 
     print("Training class distribution after SMOTE:")
     print(y_resampled.value_counts())
@@ -26,11 +21,15 @@ def train_model(X_train, y_train):
     # Model
     # ---------------------------
     model = RandomForestClassifier(
-        n_estimators=100,
-        random_state=42
+        n_estimators=500,
+        max_depth=20,
+        min_samples_split=5,
+        min_samples_leaf=2,
+        random_state=42,
+        n_jobs=-1
     )
 
     model.fit(X_resampled, y_resampled)
 
     # Return both model AND selector
-    return model, selector
+    return model
