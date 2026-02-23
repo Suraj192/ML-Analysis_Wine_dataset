@@ -51,7 +51,7 @@ ml_analysis_wine_Dataset/
 
 1. Clone the repository:
 ```
-git clone <your-repo-url>
+git clone <https://github.com/Suraj192/ML-Analysis_Wine_dataset.git>
 cd ML-Analysis_Wine_dataset
 ```
 
