@@ -14,11 +14,10 @@ def main():
     X_train, X_test, y_train, y_test = split_data(X, y)
 
     # Train
-    model = train_model(X_train, y_train)
+    model, selector = train_model(X_train, y_train)
 
     # Evaluate
-    evaluate_model(model, X_test, y_test)
-
+    evaluate_model(model, selector, X_test, y_test)
 
 if __name__ == "__main__":
     main()

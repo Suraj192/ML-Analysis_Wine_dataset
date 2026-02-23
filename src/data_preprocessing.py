@@ -6,7 +6,7 @@ def load_data(path):
     """
     Load dataset from CSV file.
     """
-    data = pd.read_csv(path)
+    data = pd.read_csv(path, delimiter=';')
     return data
 
 
@@ -15,6 +15,7 @@ def preprocess_data(data):
     dropping na values
     """
     data = data.dropna()
+    #data = data.drop(["density","free sulfur dioxide"], axis=1)
 
     X = data.drop("quality", axis=1) # response variable dropped
     y = data["quality"]
