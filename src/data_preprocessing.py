@@ -12,13 +12,11 @@ def load_data(path):
 
 def preprocess_data(data):
     """
-    Basic preprocessing.
-    Modify this if you handled missing values or scaling.
+    dropping na values
     """
-    # Example: drop missing values
     data = data.dropna()
 
-    X = data.drop("quality", axis=1)  # assuming 'quality' is target
+    X = data.drop("quality", axis=1) # response variable dropped
     y = data["quality"]
 
     return X, y
